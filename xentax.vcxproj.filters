@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="minilzo.c">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_incarnates.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_saints_row4.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_arnosurge.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_atelier_eal.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_ddda.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_dw8wxl.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_dw8xl.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_gundam3.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_gundam4.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_gxvfb.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_kdsp.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_macross30.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_one_piece.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_one_piece2.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_sengoku4.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_soulcalibur_ls.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_tekrev.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_trinity.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_wo3.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_wo3u.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="x_alg.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="x_con.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="x_kary.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="x_math.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="x_max.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="xentax.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xb360_dw8.cpp">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClCompile>
+    <ClCompile Include="xb360_dwg3.cpp">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClCompile>
+    <ClCompile Include="xb360_shhd.cpp">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClCompile>
+    <ClCompile Include="xb360_ttt2.cpp">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClCompile>
+    <ClCompile Include="xb360_wo3.cpp">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClCompile>
+    <ClCompile Include="x_xbox360.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_zlib.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="x_afs.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_smc.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_skel.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_obj.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_lwo.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dae.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_amc.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dds.cpp">
+      <Filter>Source Files\Image Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_bmp.cpp">
+      <Filter>Source Files\Image Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="x_capcom.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_compheart.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dw_g1m.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dw_ps3.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dw_xb360.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_findfile.cpp">
+      <Filter>Source Files\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="x_gui.cpp">
+      <Filter>Source Files\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="x_win32.cpp">
+      <Filter>Source Files\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="x_xml.cpp">
+      <Filter>Source Files\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="x_segs.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_pssg.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_psarc.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_ps3.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_namco.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_igb.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dsp.cpp">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_dcgogo.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="wii_super_smash.cpp">
+      <Filter>Source Files\Games\WIIU</Filter>
+    </ClCompile>
+    <ClCompile Include="x_file.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_one_piece_uwr.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_bladestorm_dw.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_dw8xl.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_zombie_army.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_one_piece3.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_dragon_quest_heroes.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_dw8empires.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="testing\pc_MKX.cpp">
+      <Filter>Source Files\Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode0.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode1.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode2.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode3.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode4.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode5.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode6.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\avpcl_mode7.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\ArvoMath.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Char.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Complex.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Matrix.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Perm.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Rand.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\SphTri.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\SVD.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Token.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Vec2.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Vec3.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Vec4.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\arvo\Vector.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\targa.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\bc7\utils.cpp">
+      <Filter>Source Files\Image Formats\BC7</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_witcher3.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="xb360_rise_of_tomb.cpp">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_dothack.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\adler32.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\compress.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\crc32.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\deflate.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\gzclose.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\gzlib.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\gzread.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\gzwrite.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\infback.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\inffast.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\inflate.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\inftrees.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\trees.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\uncompr.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="libraries\zlib\zutil.c">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="x_stream.cpp">
+      <Filter>Source Files\General</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_kiwami.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dw_arc.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="x_dw_g1t.cpp">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_arslan.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_atelier_shallie.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_alan_wake.cpp">
+      <Filter>Source Files\Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_dragon_quest.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_sw4II.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_oppw3.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_attack_on_titan.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_rezero.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="ps3_oneechanbara_z.cpp">
+      <Filter>Source Files\Testing</Filter>
+    </ClCompile>
+    <ClCompile Include="[PC] Attack on Titan.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="[PC] RE7.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="[PS3] Berserk Musou.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="[PS3] Dragon Quest II.cpp">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClCompile>
+    <ClCompile Include="[PC] Berserk Musou.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="pc_warriors_allstars.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="[PC] Dynasty Warriors 9.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+    <ClCompile Include="[PC] Tomb Raider.cpp">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lzodefs.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="minilzo.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="lzoconf.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="stdres.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_incarnates.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_saints_row4.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_arnosurge.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_atelier_eal.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_ddda.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_dw8wxl.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_dw8xl.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_gundam3.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_gundam4.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_gxvfb.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_kdsp.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_macross30.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_one_piece.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_one_piece2.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_sengoku4.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_soulcalibur_ls.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_tekrev.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_trinity.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_wo3.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_wo3u.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="x_alg.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="x_con.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="x_kary.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="x_math.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="x_max.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="xentax.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xb360_wo3.h">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClInclude>
+    <ClInclude Include="xb360_dw8.h">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClInclude>
+    <ClInclude Include="xb360_dwg3.h">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClInclude>
+    <ClInclude Include="xb360_shhd.h">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClInclude>
+    <ClInclude Include="xb360_ttt2.h">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClInclude>
+    <ClInclude Include="x_xbox360.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_zlib.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="x_afs.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_smc.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_skel.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_obj.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_lwo.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dae.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_amc.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dds.h">
+      <Filter>Source Files\Image Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_bmp.h">
+      <Filter>Source Files\Image Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="x_capcom.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_compheart.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dw_g1m.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dw_ps3.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dw_xb360.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_findfile.h">
+      <Filter>Source Files\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="x_gui.h">
+      <Filter>Source Files\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="x_win32.h">
+      <Filter>Source Files\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="x_xml.h">
+      <Filter>Source Files\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="x_segs.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_pssg.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_psarc.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_ps3.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_namco.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_igb.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dsp.h">
+      <Filter>Source Files\Output Formats</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_dcgogo.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="wii_super_smash.h">
+      <Filter>Source Files\Games\WIIU</Filter>
+    </ClInclude>
+    <ClInclude Include="x_file.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_one_piece_uwr.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_bladestorm_dw.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_dw8xl.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_zombie_army.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_one_piece3.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_dragon_quest_heroes.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_dw8empires.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="testing\pc_MKX.h">
+      <Filter>Source Files\Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_witcher3.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="xb360_rise_of_tomb.h">
+      <Filter>Source Files\Games\XBOX360</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_dothack.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\crc32.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\deflate.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\gzguts.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\inffast.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\inffixed.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\inflate.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\inftrees.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\trees.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\zconf.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\zlib.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="libraries\zlib\zutil.h">
+      <Filter>Source Files\Compression\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="x_stream.h">
+      <Filter>Source Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_kiwami.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dw_arc.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="x_dw_g1t.h">
+      <Filter>Source Files\Frameworks</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_arslan.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_atelier_shallie.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_alan_wake.h">
+      <Filter>Source Files\Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_dragon_quest.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_sw4II.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_oppw3.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_attack_on_titan.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_rezero.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="ps3_oneechanbara_z.h">
+      <Filter>Source Files\Testing</Filter>
+    </ClInclude>
+    <ClInclude Include="[PC] Attack on Titan.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="[PC] RE7.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="[PS3] Berserk Musou.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="[PS3] Dragon Quest II.h">
+      <Filter>Source Files\Games\PS3</Filter>
+    </ClInclude>
+    <ClInclude Include="[PC] Berserk Musou.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="pc_warriors_allstars.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="[PC] Dynasty Warriors 9.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+    <ClInclude Include="[PC] Tomb Raider.h">
+      <Filter>Source Files\Games\PC</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="x_compheart.txt">
+      <Filter>Source Files\Frameworks</Filter>
+    </None>
+    <None Include="x_pssg.txt">
+      <Filter>Source Files\Frameworks</Filter>
+    </None>
+    <None Include="x_igb.txt">
+      <Filter>Source Files\Frameworks</Filter>
+    </None>
+    <None Include="x_namco.inl">
+      <Filter>Source Files\Frameworks</Filter>
+    </None>
+    <None Include="x_dw_g1m.txt">
+      <Filter>Source Files\Frameworks</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="d3d9.lib">
+      <Filter>Library Files</Filter>
+    </Library>
+    <Library Include="xgraphics.lib">
+      <Filter>Library Files</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Library Files">
+      <UniqueIdentifier>{459a2244-7bee-4c28-bd22-9752ce47013f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2f8292a8-7f44-479a-a76f-49e6d5cd0cc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Compression">
+      <UniqueIdentifier>{21eb3f48-8d46-4b8d-9342-9ea261e33340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{bef30e22-d010-445f-a3d2-b54e50bbde89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games">
+      <UniqueIdentifier>{ff347c17-0249-4325-8007-4cd4147809da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\PC">
+      <UniqueIdentifier>{e4dadf54-b341-46cc-9943-643c354ea26e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\PS3">
+      <UniqueIdentifier>{b560619d-53c8-46a5-a0cb-9e99203b823b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\XBOX360">
+      <UniqueIdentifier>{00409a60-af85-4de4-87b1-298573d3cd33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\General">
+      <UniqueIdentifier>{666cb9cb-a6c8-44e2-a957-ae3e8ca9e3b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Frameworks">
+      <UniqueIdentifier>{8b105873-f91a-4a1e-9ff1-8a15340d274c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Output Formats">
+      <UniqueIdentifier>{5dd1e848-a49c-4a1d-816b-4ce97eeba4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Image Formats">
+      <UniqueIdentifier>{ce51bc0f-1f73-406e-9632-f29d1c86bae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Windows">
+      <UniqueIdentifier>{7d4d4c57-472e-49bf-9085-b5bdd8fef46b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Games\WIIU">
+      <UniqueIdentifier>{2cc384a0-498d-43bd-898e-ca2398a98a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Testing">
+      <UniqueIdentifier>{10fff972-ca8c-45af-82f2-04e2c0d7f909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Image Formats\BC7">
+      <UniqueIdentifier>{e3128728-5382-490c-b9d6-99e2f42ada1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Compression\zlib">
+      <UniqueIdentifier>{10532835-f265-4382-8699-5160ca2718ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="stdres.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pc_rezero.txt">
+      <Filter>Source Files\Games\PC</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

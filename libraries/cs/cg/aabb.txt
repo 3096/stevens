@@ -1,0 +1,65 @@
+Synopsis
+---------------------------------------------------------------------------------------------------
+
+template<class T> class min_dim_AABB;
+template<class T> class halfdim_AABB;
+template<class T> class min_max_AABB;
+
+class min_max_AABB
+---------------------------------------------------------------------------------------------------
+
+template<class T>
+class min_max_AABB {
+ // Public Data Members
+ public :
+  T min[3];
+  T max[3];
+ // Constructors
+ public :
+  min_max_AABB();
+  explicit min_max_AABB(T fill);
+  min_max_AABB(T a, T b);
+  min_max_AABB(T x1, T y1, T z1, T x2, T y2, T z2);
+  explicit min_max_AABB(const T* A);
+  min_max_AABB(const T* A, const T* B);
+  min_max_AABB(const T* A, const T* B, const T* C);
+  min_max_AABB(const min_max_AABB<T>& other);
+ // Operators
+ public :
+  min_max_AABB<T>& operator =(const min_max_AABB<T>& other);
+ // Public Member Functions
+ // Construction
+ public :
+  void from(T fill);
+  void from(T a, T b);
+  void from(T x1, T y1, T z1, T x2, T y2, T z2);
+  void from(const T* A);
+  void from(const T* A, const T* B);
+  void from(const T* A, const T* B, const T* C);
+ // Public Member Functions
+ // Modifiers
+ public :
+  void grow(int index, T value);
+  void grow(T x, T y, T z);
+  void grow(const T* v);
+  void grow(const vector2D<T>& src);
+  void grow(const vector3D<T>& src);
+  void grow(const min_max_AABB<T>& src);
+ // Public Member Functions
+ // Interrogators
+ public :
+  T dx(void)const;
+  T dy(void)const;
+  T dz(void)const;
+};
+
+// Non-Member Functions
+template<class T> vector3D<T> centroid(const min_max_AABB<T>& aabb);
+template<class T> void centroid(const min_max_AABB<T>& aabb, T* out);
+template<class T> T half_surface_area(const min_max_AABB<T>& aabb);
+template<class T> T surface_area(const min_max_AABB<T>& aabb);
+template<class T> T volume(const min_max_AABB<T>& aabb);
+template<class T> int dominator(const min_max_AABB<T>& aabb);
+template<class T> int submissor(const min_max_AABB<T>& aabb);
+template<class T> int dominator(const min_max_AABB<T>& aabb, T* dims);
+template<class T> int submissor(const min_max_AABB<T>& aabb, T* dims);

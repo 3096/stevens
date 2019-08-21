@@ -1,0 +1,188 @@
+std::vector<uint32> GetMaterialTextureIDList(binary_stream& bs)
+{
+ // header
+ uint32 m01 = bs.BE_read_uint32(); // 0x00
+ uint16 m02 = bs.BE_read_uint16(); // 0x00
+ uint16 m03 = bs.BE_read_uint16(); // number of items
+ uint16 m04 = bs.BE_read_uint16(); // 0x00
+ uint16 m05 = bs.BE_read_uint16(); // 0x00
+ uint32 m06 = bs.BE_read_uint32(); // 0x0405
+ uint32 m07 = bs.BE_read_uint32(); // 0x00
+ uint32 m08 = bs.BE_read_uint32(); // 0x00
+ uint32 m09 = bs.BE_read_uint32(); // 0x00
+ if(bs.fail()) return vector<uint32>();
+
+ // textures
+ std::vector<uint32> id(m03, 0xFFFFFFFFul);
+ for(uint32 i = 0; i < m03; i++) {
+     id[i] = bs.BE_read_uint32();
+     bs.move(0x14);
+     if(bs.fail()) return std::vector<uint32>();
+    }
+
+ return id;
+}
+
+bool material_01(binary_stream& bs, NAMCO::MATERIALINFO& mi)
+{
+ std::vector<uint32> id = GetMaterialTextureIDList(bs);
+ if(id.size() == 0x00) mi.list[0] = std::pair<uint32, uint32>(id[0], NAMCO_INVALID);
+ else mi.list[0] = std::pair<uint32, uint32>(id[0], NAMCO_DIFFUSE);
+ return true;
+}
+
+bool material_00000011(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_04100011(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_08100000(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_0810003b(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_08200014(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_0820001a(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_0820001b(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_08200020(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_08200021(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_21460300(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_21550320(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22080000(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22080400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22080480(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22080500(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22080580(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22080782(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22081480(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22081580(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22084480(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22088000(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22088080(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22088180(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22088400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22088580(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0480(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0580(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0680(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0780(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0c00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0c80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0d00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0d80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0e00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0e80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0ea0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0f00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0f20(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0f80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c0fa0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c3e80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c468c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c8800(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c8880(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c8900(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c8980(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c8c00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220c8d80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220d0600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_220d0680(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_221c3f80(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0480(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0580(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0680(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c06a0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0700(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c0780(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_222c8180(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_223c3780(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22480700(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_22480780(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080000(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080010(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080020(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080100(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080110(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080480(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080500(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24080510(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24081000(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24081400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24081410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24081440(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24082400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24082410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24083400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24084400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24084410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24085400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24088490(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24090400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24090410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0900(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0910(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0a00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0a10(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0c00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0c10(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0d00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0e00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0e10(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c0e20(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c260c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c261c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c270c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c3614(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c4604(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c460c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c461c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c470c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_240c471c(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_241c0200(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_241c0610(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_242c0100(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_242c0400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_242c0410(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_242c0600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_242c0620(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24400101(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24480200(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24480400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_24480600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_244c0400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_244c0600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_244c0c00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_244c0e00(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_246c0400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_246c0600(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_28000101(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280083c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280087c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280101c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280103c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280103d0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280103e0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280105c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280107c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280107d0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280107e0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280503c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280507c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280543e0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280603c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280603c4(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280605c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280607c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280607c4(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_280607e0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_28060fd0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_28081400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_281085c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_281085d0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_281105d0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_28280400(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_284607c0(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_30000000(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }
+bool material_94011063(binary_stream& bs, NAMCO::MATERIALINFO& mi) { return material_01(bs, mi); }

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "xentax", "xentax.vcxproj", "{DA33424A-D530-42EC-BCCA-205F9C3B9141}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA33424A-D530-42EC-BCCA-205F9C3B9141}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA33424A-D530-42EC-BCCA-205F9C3B9141}.Debug|Win32.Build.0 = Debug|Win32
+		{DA33424A-D530-42EC-BCCA-205F9C3B9141}.Release|Win32.ActiveCfg = Release|Win32
+		{DA33424A-D530-42EC-BCCA-205F9C3B9141}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

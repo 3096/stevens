@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DA33424A-D530-42EC-BCCA-205F9C3B9141}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>xentax</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(IncludePath);$(BOOST_INCLUDE_PATH);$(SolutionDir)/libraries/;</IncludePath>
+    <OutDir>$(SolutionDir)outputs\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath);$(BOOST_INCLUDE_PATH);$(SolutionDir)/libraries/;</IncludePath>
+    <OutDir>$(SolutionDir)outputs\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intermediates\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="libraries\zlib\crc32.h" />
+    <ClInclude Include="libraries\zlib\deflate.h" />
+    <ClInclude Include="libraries\zlib\gzguts.h" />
+    <ClInclude Include="libraries\zlib\inffast.h" />
+    <ClInclude Include="libraries\zlib\inffixed.h" />
+    <ClInclude Include="libraries\zlib\inflate.h" />
+    <ClInclude Include="libraries\zlib\inftrees.h" />
+    <ClInclude Include="libraries\zlib\trees.h" />
+    <ClInclude Include="libraries\zlib\zconf.h" />
+    <ClInclude Include="libraries\zlib\zlib.h" />
+    <ClInclude Include="libraries\zlib\zutil.h" />
+    <ClInclude Include="lzoconf.h" />
+    <ClInclude Include="lzodefs.h" />
+    <ClInclude Include="minilzo.h" />
+    <ClInclude Include="pc_alan_wake.h" />
+    <ClInclude Include="pc_arslan.h" />
+    <ClInclude Include="pc_dragon_quest.h" />
+    <ClInclude Include="pc_dw8xl.h" />
+    <ClInclude Include="pc_incarnates.h" />
+    <ClInclude Include="pc_kiwami.h" />
+    <ClInclude Include="pc_oppw3.h" />
+    <ClInclude Include="pc_saints_row4.h" />
+    <ClInclude Include="pc_sw4II.h" />
+    <ClInclude Include="pc_warriors_allstars.h" />
+    <ClInclude Include="pc_witcher3.h" />
+    <ClInclude Include="ps3_arnosurge.h" />
+    <ClInclude Include="ps3_atelier_eal.h" />
+    <ClInclude Include="ps3_atelier_shallie.h" />
+    <ClInclude Include="ps3_attack_on_titan.h" />
+    <ClInclude Include="ps3_bladestorm_dw.h" />
+    <ClInclude Include="ps3_dcgogo.h" />
+    <ClInclude Include="ps3_ddda.h" />
+    <ClInclude Include="ps3_dothack.h" />
+    <ClInclude Include="ps3_dragon_quest_heroes.h" />
+    <ClInclude Include="ps3_dw8empires.h" />
+    <ClInclude Include="ps3_dw8wxl.h" />
+    <ClInclude Include="ps3_dw8xl.h" />
+    <ClInclude Include="ps3_gundam3.h" />
+    <ClInclude Include="ps3_gundam4.h" />
+    <ClInclude Include="ps3_gxvfb.h" />
+    <ClInclude Include="ps3_kdsp.h" />
+    <ClInclude Include="ps3_macross30.h" />
+    <ClInclude Include="ps3_oneechanbara_z.h" />
+    <ClInclude Include="ps3_one_piece3.h" />
+    <ClInclude Include="ps3_one_piece_uwr.h" />
+    <ClInclude Include="ps3_one_piece.h" />
+    <ClInclude Include="ps3_one_piece2.h" />
+    <ClInclude Include="pc_rezero.h" />
+    <ClInclude Include="ps3_sengoku4.h" />
+    <ClInclude Include="ps3_soulcalibur_ls.h" />
+    <ClInclude Include="ps3_tekrev.h" />
+    <ClInclude Include="ps3_trinity.h" />
+    <ClInclude Include="ps3_wo3.h" />
+    <ClInclude Include="ps3_wo3u.h" />
+    <ClInclude Include="stdres.h" />
+    <ClInclude Include="pc_zombie_army.h" />
+    <ClInclude Include="testing\pc_MKX.h" />
+    <ClInclude Include="wii_super_smash.h" />
+    <ClInclude Include="xb360_dw8.h" />
+    <ClInclude Include="xb360_dwg3.h" />
+    <ClInclude Include="xb360_rise_of_tomb.h" />
+    <ClInclude Include="xb360_shhd.h" />
+    <ClInclude Include="xb360_ttt2.h" />
+    <ClInclude Include="xb360_wo3.h" />
+    <ClInclude Include="xentax.h" />
+    <ClInclude Include="x_capcom.h" />
+    <ClInclude Include="x_dw_arc.h" />
+    <ClInclude Include="x_dw_g1t.h" />
+    <ClInclude Include="x_gui.h" />
+    <ClInclude Include="x_afs.h" />
+    <ClInclude Include="x_alg.h" />
+    <ClInclude Include="x_amc.h" />
+    <ClInclude Include="x_bmp.h" />
+    <ClInclude Include="x_compheart.h" />
+    <ClInclude Include="x_con.h" />
+    <ClInclude Include="x_dae.h" />
+    <ClInclude Include="x_dds.h" />
+    <ClInclude Include="x_dsp.h" />
+    <ClInclude Include="x_dw_g1m.h" />
+    <ClInclude Include="x_dw_ps3.h" />
+    <ClInclude Include="x_dw_xb360.h" />
+    <ClInclude Include="x_file.h" />
+    <ClInclude Include="x_findfile.h" />
+    <ClInclude Include="x_igb.h" />
+    <ClInclude Include="x_kary.h" />
+    <ClInclude Include="x_lwo.h" />
+    <ClInclude Include="x_math.h" />
+    <ClInclude Include="x_max.h" />
+    <ClInclude Include="x_namco.h" />
+    <ClInclude Include="x_obj.h" />
+    <ClInclude Include="x_ps3.h" />
+    <ClInclude Include="x_psarc.h" />
+    <ClInclude Include="x_pssg.h" />
+    <ClInclude Include="x_segs.h" />
+    <ClInclude Include="x_skel.h" />
+    <ClInclude Include="x_smc.h" />
+    <ClInclude Include="x_stream.h" />
+    <ClInclude Include="x_win32.h" />
+    <ClInclude Include="x_xbox360.h" />
+    <ClInclude Include="x_xml.h" />
+    <ClInclude Include="x_zlib.h" />
+    <ClInclude Include="[PC] Attack on Titan.h" />
+    <ClInclude Include="[PC] Berserk Musou.h" />
+    <ClInclude Include="[PC] Dynasty Warriors 9.h" />
+    <ClInclude Include="[PC] RE7.h" />
+    <ClInclude Include="[PC] Tomb Raider.h" />
+    <ClInclude Include="[PS3] Berserk Musou.h" />
+    <ClInclude Include="[PS3] Dragon Quest II.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="libraries\bc7\arvo\ArvoMath.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Char.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Complex.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Matrix.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Perm.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Rand.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\SphTri.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\SVD.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Token.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Vec2.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Vec3.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Vec4.cpp" />
+    <ClCompile Include="libraries\bc7\arvo\Vector.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode0.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode1.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode2.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode3.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode4.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode5.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode6.cpp" />
+    <ClCompile Include="libraries\bc7\avpcl_mode7.cpp" />
+    <ClCompile Include="libraries\bc7\targa.cpp" />
+    <ClCompile Include="libraries\bc7\utils.cpp" />
+    <ClCompile Include="libraries\zlib\adler32.c" />
+    <ClCompile Include="libraries\zlib\compress.c" />
+    <ClCompile Include="libraries\zlib\crc32.c" />
+    <ClCompile Include="libraries\zlib\deflate.c" />
+    <ClCompile Include="libraries\zlib\gzclose.c" />
+    <ClCompile Include="libraries\zlib\gzlib.c" />
+    <ClCompile Include="libraries\zlib\gzread.c" />
+    <ClCompile Include="libraries\zlib\gzwrite.c" />
+    <ClCompile Include="libraries\zlib\infback.c" />
+    <ClCompile Include="libraries\zlib\inffast.c" />
+    <ClCompile Include="libraries\zlib\inflate.c" />
+    <ClCompile Include="libraries\zlib\inftrees.c" />
+    <ClCompile Include="libraries\zlib\trees.c" />
+    <ClCompile Include="libraries\zlib\uncompr.c" />
+    <ClCompile Include="libraries\zlib\zutil.c" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="minilzo.c" />
+    <ClCompile Include="pc_alan_wake.cpp" />
+    <ClCompile Include="pc_arslan.cpp" />
+    <ClCompile Include="pc_dragon_quest.cpp" />
+    <ClCompile Include="pc_dw8xl.cpp" />
+    <ClCompile Include="pc_incarnates.cpp" />
+    <ClCompile Include="pc_kiwami.cpp" />
+    <ClCompile Include="pc_oppw3.cpp" />
+    <ClCompile Include="pc_saints_row4.cpp" />
+    <ClCompile Include="pc_sw4II.cpp" />
+    <ClCompile Include="pc_warriors_allstars.cpp" />
+    <ClCompile Include="pc_witcher3.cpp" />
+    <ClCompile Include="ps3_arnosurge.cpp" />
+    <ClCompile Include="ps3_atelier_eal.cpp" />
+    <ClCompile Include="ps3_atelier_shallie.cpp" />
+    <ClCompile Include="ps3_attack_on_titan.cpp" />
+    <ClCompile Include="ps3_bladestorm_dw.cpp" />
+    <ClCompile Include="ps3_dcgogo.cpp" />
+    <ClCompile Include="ps3_ddda.cpp" />
+    <ClCompile Include="ps3_dothack.cpp" />
+    <ClCompile Include="ps3_dragon_quest_heroes.cpp" />
+    <ClCompile Include="ps3_dw8empires.cpp" />
+    <ClCompile Include="ps3_dw8wxl.cpp" />
+    <ClCompile Include="ps3_dw8xl.cpp" />
+    <ClCompile Include="ps3_gundam3.cpp" />
+    <ClCompile Include="ps3_gundam4.cpp" />
+    <ClCompile Include="ps3_gxvfb.cpp" />
+    <ClCompile Include="ps3_kdsp.cpp" />
+    <ClCompile Include="ps3_macross30.cpp" />
+    <ClCompile Include="ps3_oneechanbara_z.cpp" />
+    <ClCompile Include="ps3_one_piece3.cpp" />
+    <ClCompile Include="ps3_one_piece_uwr.cpp" />
+    <ClCompile Include="ps3_one_piece.cpp" />
+    <ClCompile Include="ps3_one_piece2.cpp" />
+    <ClCompile Include="pc_rezero.cpp" />
+    <ClCompile Include="ps3_sengoku4.cpp" />
+    <ClCompile Include="ps3_soulcalibur_ls.cpp" />
+    <ClCompile Include="ps3_tekrev.cpp" />
+    <ClCompile Include="ps3_trinity.cpp" />
+    <ClCompile Include="ps3_wo3.cpp" />
+    <ClCompile Include="ps3_wo3u.cpp" />
+    <ClCompile Include="pc_zombie_army.cpp" />
+    <ClCompile Include="testing\pc_MKX.cpp" />
+    <ClCompile Include="wii_super_smash.cpp" />
+    <ClCompile Include="xb360_dw8.cpp" />
+    <ClCompile Include="xb360_dwg3.cpp" />
+    <ClCompile Include="xb360_rise_of_tomb.cpp" />
+    <ClCompile Include="xb360_shhd.cpp" />
+    <ClCompile Include="xb360_ttt2.cpp" />
+    <ClCompile Include="xb360_wo3.cpp" />
+    <ClCompile Include="xentax.cpp" />
+    <ClCompile Include="x_capcom.cpp" />
+    <ClCompile Include="x_dw_arc.cpp" />
+    <ClCompile Include="x_dw_g1t.cpp" />
+    <ClCompile Include="x_gui.cpp" />
+    <ClCompile Include="x_afs.cpp" />
+    <ClCompile Include="x_alg.cpp" />
+    <ClCompile Include="x_amc.cpp" />
+    <ClCompile Include="x_bmp.cpp" />
+    <ClCompile Include="x_compheart.cpp" />
+    <ClCompile Include="x_con.cpp" />
+    <ClCompile Include="x_dae.cpp" />
+    <ClCompile Include="x_dds.cpp" />
+    <ClCompile Include="x_dsp.cpp" />
+    <ClCompile Include="x_dw_g1m.cpp" />
+    <ClCompile Include="x_dw_ps3.cpp" />
+    <ClCompile Include="x_dw_xb360.cpp" />
+    <ClCompile Include="x_file.cpp" />
+    <ClCompile Include="x_findfile.cpp" />
+    <ClCompile Include="x_igb.cpp" />
+    <ClCompile Include="x_kary.cpp" />
+    <ClCompile Include="x_lwo.cpp" />
+    <ClCompile Include="x_math.cpp" />
+    <ClCompile Include="x_max.cpp" />
+    <ClCompile Include="x_namco.cpp" />
+    <ClCompile Include="x_obj.cpp" />
+    <ClCompile Include="x_ps3.cpp" />
+    <ClCompile Include="x_psarc.cpp" />
+    <ClCompile Include="x_pssg.cpp" />
+    <ClCompile Include="x_segs.cpp" />
+    <ClCompile Include="x_skel.cpp" />
+    <ClCompile Include="x_smc.cpp" />
+    <ClCompile Include="x_stream.cpp" />
+    <ClCompile Include="x_win32.cpp" />
+    <ClCompile Include="x_xbox360.cpp" />
+    <ClCompile Include="x_xml.cpp" />
+    <ClCompile Include="x_zlib.cpp" />
+    <ClCompile Include="[PC] Attack on Titan.cpp" />
+    <ClCompile Include="[PC] Berserk Musou.cpp" />
+    <ClCompile Include="[PC] Dynasty Warriors 9.cpp" />
+    <ClCompile Include="[PC] RE7.cpp" />
+    <ClCompile Include="[PC] Tomb Raider.cpp" />
+    <ClCompile Include="[PS3] Berserk Musou.cpp" />
+    <ClCompile Include="[PS3] Dragon Quest II.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="x_compheart.txt" />
+    <None Include="x_dw_g1m.txt" />
+    <None Include="x_igb.txt" />
+    <None Include="x_namco.inl" />
+    <None Include="x_pssg.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="d3d9.lib" />
+    <Library Include="xgraphics.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="stdres.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="pc_rezero.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
