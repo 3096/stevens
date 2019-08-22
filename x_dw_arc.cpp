@@ -1617,18 +1617,18 @@ namespace DYNASTY_WARRIORS {
 				return error(ss);
 			}
 
-			// insert item only if there is something to save
-			if (item.p2 == 0) continue;
-			if (item.p3 == 0) continue;
 			itemlist.push_back(item);
 		}
 
 		// save items
 		for (size_t i = 0; i < itemlist.size(); i++)
 		{
+			// skip empty idx
+			if (itemlist[i].p2 == 0 || itemlist[i].p3 == 0) continue;
+
 			// construct output filename
 			STDSTRINGSTREAM ss;
-			ss << savepath << setfill(L'0') << setw(4) << i << L".";
+			ss << savepath << i << L".";
 			if (itemlist[i].p4 == 0) ss << L"idxout";
 			else if (itemlist[i].p4 == 1) ss << L"idxzrc";
 			else {
