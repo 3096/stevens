@@ -4,7 +4,7 @@
 #include "x_stream.h"
 #include "x_dw_arc.h"
 
-static const bool DELETE_SMALL_FILES = true;
+static const bool DELETE_SMALL_FILES = false;
 static const uint32 SMALL_FILESIZE = 0x100;
 static const uint32 LARGE_FILESIZE = 0x2000000;
 
@@ -730,7 +730,7 @@ namespace DYNASTY_WARRIORS {
 		if (files > 0xFFFF) return false;
 
 		// compute size of offset and sizes sections
-		uint32 offsets_size = sizeof(uint32)*files;
+		uint32 offsets_size = sizeof(uint32) * files;
 		offsets_size = ((offsets_size + 0x7F) & (~0x7F));
 		uint32 n_zeroes = offsets_size / 4 - files;
 
@@ -2008,7 +2008,7 @@ namespace DYNASTY_WARRIORS {
 		for (size_t i = 0; i < filetable.size(); i++)
 		{
 			// move to file position
-			uint64 position = filetable[i].offset*headScale;
+			uint64 position = filetable[i].offset * headScale;
 			uint32 filesize = filetable[i].size1;
 			ifile.seekg(position);
 			if (ifile.fail()) return error("Seek failure.");
@@ -2183,7 +2183,7 @@ namespace DYNASTY_WARRIORS {
 		for (size_t i = 0; i < filetable.size(); i++)
 		{
 			// move to file position
-			size_t position = (size_t)(filetable[i].p01*scale);
+			size_t position = (size_t)(filetable[i].p01 * scale);
 			size_t filesize = (size_t)(filetable[i].p04);
 			ifile.seekg(position);
 			if (ifile.fail()) return error("Seek failure.");
@@ -2243,10 +2243,10 @@ namespace DYNASTY_WARRIORS {
 			// keep track of how many files were processed
 			cout << "ARCHIVE UNPACK LOOP #" << loop_counter << ": " << endl;
 			uint32 processed = 0;
+			deque<STDSTRING> filelist;
 
 			// process IDXOUT files
 			cout << "Processing .IDXOUT files..." << endl;
-			deque<STDSTRING> filelist;
 			BuildFilenameList(filelist, TEXT(".IDXOUT"), pathname);
 			for (size_t i = 0; i < filelist.size(); i++) {
 				wcout << "Processing file " << (i + 1) << " of " << filelist.size() << ": " << filelist[i] << "." << endl;
@@ -2510,28 +2510,30 @@ namespace DYNASTY_WARRIORS {
 		ifile.seekg(0, ios::beg);
 		if (ifile.fail()) return error("Seek failure.");
 
-		// delete file given first four bytes (little endian)
-		uint32 magic = LE_read_uint32(ifile);
-		if (ifile.fail() || ExcludeExtension(magic)) {
-			ifile.close();
-			DeleteFile(filename);
-			return true;
-		}
-
-		// delete file given first four bytes (big endian)
-		reverse_byte_order(&magic);
-		if (ifile.fail() || ExcludeExtension(magic)) {
-			ifile.close();
-			DeleteFile(filename);
-			return true;
-		}
+		// 3096: File size can be 0
+		//// delete file given first four bytes (little endian)
+		//uint32 magic = LE_read_uint32(ifile);
+		//if (ifile.fail() || ExcludeExtension(magic)) {
+		//	ifile.close();
+		//	DeleteFile(filename);
+		//	return true;
+		//}
+		//
+		//// delete file given first four bytes (big endian)
+		//reverse_byte_order(&magic);
+		//if (ifile.fail() || ExcludeExtension(magic)) {
+		//	ifile.close();
+		//	DeleteFile(filename);
+		//	return true;
+		//}
 
 		// close file
 		ifile.close();
 
 		// filesize is zero (delete or rename)
 		if (!filesize) {
-			if (DELETE_SMALL_FILES) DeleteFile(filename);
+			if (DELETE_SMALL_FILES)
+				DeleteFile(filename);
 			else {
 				STDSTRING savename = ChangeFileExtension(filename, TEXT("unknown")).get();
 				MoveFileEx(filename, savename.c_str(), MOVEFILE_REPLACE_EXISTING);
@@ -2631,7 +2633,7 @@ namespace DYNASTY_WARRIORS {
 		for (size_t i = 0; i < filetable.size(); i++)
 		{
 			// move to file position
-			size_t position = filetable[i].first*headScale;
+			size_t position = filetable[i].first * headScale;
 			size_t filesize = filetable[i].second;
 			ifile.seekg(position);
 			if (ifile.fail()) return error("Seek failure.");
@@ -2795,7 +2797,7 @@ namespace DYNASTY_WARRIORS {
 		for (size_t i = 0; i < filetable.size(); i++)
 		{
 			// move to file position
-			uint64 position = filetable[i].offset*scale;
+			uint64 position = filetable[i].offset * scale;
 			uint32 filesize = filetable[i].size1;
 			ifile.seekg(position);
 			if (ifile.fail()) return error("Seek failure.");
@@ -2892,6 +2894,7 @@ namespace DYNASTY_WARRIORS {
 		// filename properties
 		STDSTRING pathname = GetPathnameFromFilename(filename).get();
 		STDSTRING shrtname = GetShortFilenameWithoutExtension(filename).get();
+		STDSTRING extension = GetExtensionFromFilename(filename).get();
 
 		// read data
 		boost::shared_array<char> filedata(new char[filesize]);
@@ -2917,13 +2920,16 @@ namespace DYNASTY_WARRIORS {
 			uint32 length = bs.read_uint32();
 			if (bs.fail()) return false;
 
-			// ignore entry
-			if (offset == 0 && length == 0)
-				continue;
+			// 3096: what the hell is this check? It's just if length == 0 dude.
+			//       also I'm gonna need to allow length to be 0 thank you
 
-			// ignore entry
-			if (offset != 0 && length == 0)
-				continue;
+			//// ignore entry
+			//if (offset == 0 && length == 0)
+			//	continue;
+
+			//// ignore entry
+			//if (offset != 0 && length == 0)
+			//	continue;
 
 			// invalid entry
 			if (offset == 0 && length != 0)
@@ -2955,6 +2961,8 @@ namespace DYNASTY_WARRIORS {
 		// create save directory
 		STDSTRING savepath = pathname;
 		savepath += shrtname;
+		savepath += TEXT("-");
+		savepath += extension.substr(1);
 		savepath += TEXT("\\");
 		CreateDirectory(savepath.c_str(), NULL);
 
@@ -3452,7 +3460,7 @@ namespace DYNASTY_WARRIORS {
 		if (files > 0xFFFF) return error("Unexpected number of files.", __LINE__);
 
 		// compute size of offset and sizes sections
-		uint32 offsets_size = sizeof(uint32)*files;
+		uint32 offsets_size = sizeof(uint32) * files;
 		offsets_size = ((offsets_size + 0x7F) & (~0x7F));
 		uint32 n_zeroes = offsets_size / 4 - files;
 
