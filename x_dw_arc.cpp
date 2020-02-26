@@ -3580,7 +3580,8 @@ namespace DYNASTY_WARRIORS {
 		if (bs.fail()) return error("Read failure.");
 
 		// nothing to do
-		if (h03 == 0x00) return true;
+		// 3096: just do it anyways so you don't get stuck in a loop when small files are included
+		// if (h03 == 0x00) return true;
 
 		// validate MDLK
 		switch (h01) {
