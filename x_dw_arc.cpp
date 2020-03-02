@@ -1639,7 +1639,7 @@ namespace DYNASTY_WARRIORS {
 
 			// display information and ignore small files
 			wcout << " FILE " << (i + 1) << " of " << itemlist.size() << ": " << ss.str() << endl;
-			if (!(itemlist[i].p3 > SMALL_FILESIZE)) continue;
+            if (DELETE_SMALL_FILES && !(itemlist[i].p3 > SMALL_FILESIZE)) continue;
 
 			// read first four bytes and determine whether or not to save file
 			bfile.seekg(itemlist[i].p1);
@@ -2245,16 +2245,6 @@ namespace DYNASTY_WARRIORS {
 			uint32 processed = 0;
 			deque<STDSTRING> filelist;
 
-			// process IDXOUT files
-			cout << "Processing .IDXOUT files..." << endl;
-			BuildFilenameList(filelist, TEXT(".IDXOUT"), pathname);
-			for (size_t i = 0; i < filelist.size(); i++) {
-				wcout << "Processing file " << (i + 1) << " of " << filelist.size() << ": " << filelist[i] << "." << endl;
-				if (!IDXOUT_FileExtract(filelist[i].c_str(), mode)) return false;
-			}
-			cout << endl;
-			processed += filelist.size();
-
 			// process IDXZRC files
 			cout << "Processing .IDXZRC files..." << endl;
 			filelist.clear();
@@ -2262,6 +2252,16 @@ namespace DYNASTY_WARRIORS {
 			for (size_t i = 0; i < filelist.size(); i++) {
 				wcout << "Processing file " << (i + 1) << " of " << filelist.size() << ": " << filelist[i] << "." << endl;
 				if (!IDXZRC_FileExtract(filelist[i].c_str(), mode)) return false;
+			}
+			cout << endl;
+			processed += filelist.size();
+
+			// process IDXOUT files
+			cout << "Processing .IDXOUT files..." << endl;
+			BuildFilenameList(filelist, TEXT(".IDXOUT"), pathname);
+			for (size_t i = 0; i < filelist.size(); i++) {
+				wcout << "Processing file " << (i + 1) << " of " << filelist.size() << ": " << filelist[i] << "." << endl;
+				if (!IDXOUT_FileExtract(filelist[i].c_str(), mode)) return false;
 			}
 			cout << endl;
 			processed += filelist.size();
